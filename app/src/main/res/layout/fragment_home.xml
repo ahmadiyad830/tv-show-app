@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="isLoading"
+            type="Boolean" />
+
+        <variable
+            name="isLoadingMore"
+            type="Boolean" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view_fragmet.FragmentHome">
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/coordinatorLayout"
+                android:layout_width="match_parent"
+                android:background="@color/primary"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/app_bar_layout"
+                    style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary"
+                    app:elevation="6dp">
+                    <!--com.google.android.material.appbar.CollapsingToolbarLayout-->
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/collapseActionView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:background="@color/colorTextOther"
+                        android:fitsSystemWindows="true"
+                        app:expandedTitleTextAppearance="@android:color/transparent"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                        <!--TODO : add your custom profile with coordinator Layout -->
+
+                        <!-- Toolbar -->
+                        <com.google.android.material.appbar.MaterialToolbar
+                            android:id="@+id/toolbar_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            app:layout_collapseMode="pin"
+                            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                            app:subtitleTextColor="@android:color/white" />
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tableLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="?actionBarSize"
+                            android:background="@color/colorTextOther"
+                            android:layout_gravity="bottom"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:tabIndicatorColor="@color/black"
+                            app:tabIndicatorFullWidth="true"
+                            app:tabInlineLabel="true"
+                            app:tabSelectedTextColor="@color/black"
+                            app:tabTextAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                            app:tabTextColor="#FCFEFF" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_margin="@dimen/_8sdp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorTextOther">
+
+
+                            <ImageView
+                                android:id="@+id/ic_search"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_search"
+                                app:tint="@color/white" />
+
+
+                        </RelativeLayout>
+
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="name"
+            type="String" />
+
+        <variable
+            name="wantShow"
+            type="String" />
+
+        <variable
+            name="showed"
+            type="String" />
+
+        <variable
+            name="thumble"
+            type="String" />
+        <import type="com.example.tvshowv2.models.TVShows"/>
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        tools:context=".view_fragmet.FragmentProfile">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            app:elevation="6dp">
+            <!--com.google.android.material.appbar.CollapsingToolbarLayout-->
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapseActionView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:fitsSystemWindows="true"
+                app:expandedTitleTextAppearance="@android:color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <!--TODO : add your custom profile with coordinator Layout -->
+
+                <!-- Toolbar -->
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:subtitleTextColor="@android:color/white" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="@dimen/_6sdp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="start"
+                            android:layout_marginHorizontal="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:src="@drawable/ic_settings"
+                            app:tint="@color/colorTextOther" />
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="end"
+                            android:layout_marginHorizontal="@dimen/_13sdp"
+                            android:layout_weight="1"
+                            android:text="@{name}"
+                            android:textColor="@color/colorTextOther"
+                            android:textSize="@dimen/_22sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|start"
+                            android:layout_marginHorizontal="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/wantShow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_8sdp"
+                                android:gravity="center"
+                                android:text='@{wantShow}'
+                                android:textColor="@color/colorTextOther"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <TextView
+                                android:id="@+id/showed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_8sdp"
+                                android:gravity="center"
+                                android:text="@{showed}"
+                                android:textColor="@color/colorTextOther"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="@dimen/_6sdp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_collapseMode="pin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="?actionBarSize"
+                            app:tabIndicatorHeight="@dimen/_3sdp"
+                            app:tabMode="fixed" />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <!--LinearLayout-->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

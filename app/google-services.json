@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "799042789132",
+    "firebase_url": "https://special-needs-a6e99-softwillow.firebaseio.com",
+    "project_id": "special-needs-a6e99-softwillow",
+    "storage_bucket": "special-needs-a6e99-softwillow.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799042789132:android:8ddb90294226fa69513329",
+        "android_client_info": {
+          "package_name": "com.example.tvshowv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799042789132-1q5b3on9h7a0b7o9ik1nnipvta77fn7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8VAJcmDrqJKw48eNOY_6Iff39pLUVpsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799042789132-1q5b3on9h7a0b7o9ik1nnipvta77fn7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799042789132:android:126e0f01c8f3a6d6513329",
+        "android_client_info": {
+          "package_name": "com.softwillow.specialneeds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799042789132-1q5b3on9h7a0b7o9ik1nnipvta77fn7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8VAJcmDrqJKw48eNOY_6Iff39pLUVpsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799042789132-1q5b3on9h7a0b7o9ik1nnipvta77fn7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

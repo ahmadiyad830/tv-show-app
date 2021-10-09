@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">TVShowV2</string>
+    <string name="u2022" translatable="false">\u2022</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="want_show">want show</string>
+    <string name="showed">showed</string>
+    <string name="search_bar">search bar</string>
+    <string name="go_show">go ..show</string>
+    <string name="pictures">Pictures</string>
+    <string name="episodes">Episodes</string>
+    <string name="website">Website</string>
+    <string name="wanted">Wanted</string>
+    <string name="genere">genere</string>
+    <string name="keep_reading">keep reading</string>
+    <string name="discription">discription</string>
+    <string name="home">home</string>
+    <string name="profile">profile</string>
+    <string name="setting">setting</string>
+    <string-array name="spinner_fliter">
+        <item>time</item>
+        <item>time</item>
+        <item>time</item>
+        <item>time</item>
+        <item>time</item>
+    </string-array>
+</resources>
